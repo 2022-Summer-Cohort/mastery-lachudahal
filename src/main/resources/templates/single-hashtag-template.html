@@ -20,7 +20,7 @@
     </header>
     <main>
         <ul>
-            <li th:each="thing:${hashtags.post}"><a th:href="'/posts/' +
+            <li th:each="thing:${hashtags.posts}"><a th:href="'/posts/' +
                 ${thing.id}" th:text="${thing.name}"></a>
             </li>
         </ul>
