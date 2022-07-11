@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title th:text="${post.title}">Document</title>
+    <title th:text="${topic.name}">Document</title>
 
     <link rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet" href="/css/layout.css"/>
@@ -30,6 +30,13 @@
                        class="posts__nav-link"></a>
                 </div>
             </nav>
+            <form th:action="'/topics/' + ${topic.id} + '/addPost'" method="post">
+                <input type="text" name="title" id="titleID"/>
+                <input type="text" name="content" id="contentID"/>
+                <input type="text" name="author" id="authorID"/>
+                <button type="submit">Submit</button>
+            </form>
+
         </section>
     </main>
 </div>
