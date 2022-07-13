@@ -20,8 +20,10 @@
     </header>
     <main>
         <ul>
-            <li th:each="thing:${hashtags.posts}"><a th:href="'/posts/' +
-                ${thing.id}" th:text="${thing.name}"></a>
+            <li th:each="thing: ${hashtag.posts}">
+                <a th:href="'/posts/' + ${thing.id}"
+                    th:text="${thing.title}">
+                </a>
             </li>
         </ul>
     </main>
