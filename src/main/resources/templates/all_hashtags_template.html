@@ -21,7 +21,7 @@
     <main>
         <ul>
             <li th:each="thing:${hashtags}"><a th:href="'/hashtags/' +
-                ${thing.id}" th:text="${thing.name}"></a>
+                ${thing.id}" th:text="${thing.title}"></a>
             </li>
         </ul>
     </main>
