@@ -31,10 +31,10 @@
                 </div>
             </nav>
             <form th:action="'/topics/' + ${topic.id} + '/addPost'" method="post">
-                <input type="text" name="title" id="titleID"/>
-                <input type="text" name="content" id="contentID"/>
-                <input type="text" name="author" id="authorID"/>
-                <button type="submit">Submit</button>
+                <input placeholder="Title" type="text" name="title" id="titleID"/>
+                <input placeholder="Content" type="text" name="content" id="contentID"/>
+                <input placeholder="Author" type="text" name="author" id="authorID"/>
+                <button placeholder="Submit" type="submit">Submit</button>
             </form>
 
         </section>

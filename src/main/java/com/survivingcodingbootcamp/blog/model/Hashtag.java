@@ -16,7 +16,8 @@ public class Hashtag {
 
     @ManyToMany(mappedBy = "hashtags")
     private Collection<Post> posts;
-
+    public Hashtag() {
+    }
     public Hashtag(String name, Post... posts) {
         this.name = name;
         this.posts = Arrays.asList(posts);
@@ -26,8 +27,7 @@ public class Hashtag {
         return id;
     }
 
-    public Hashtag() {
-    }
+
 
 
 

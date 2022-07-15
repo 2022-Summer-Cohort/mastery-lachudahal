@@ -14,6 +14,7 @@ public class HashtagController {
     private HashtagRepository hashtagRepo;
     private PostRepository postRepo;
 
+
     public HashtagController(HashtagRepository hashtagRepo, PostRepository postRepo) {
         this.hashtagRepo = hashtagRepo;
         this.postRepo = postRepo;
@@ -26,6 +27,6 @@ public class HashtagController {
     @RequestMapping("/{id}")
     public String getSingleHashtag(Model model, @PathVariable Long id){
         model.addAttribute("hashtag", hashtagRepo.findById(id).get());
-        return "single_hashtag_template";
+        return "single-hashtag-template";
     }
 }
